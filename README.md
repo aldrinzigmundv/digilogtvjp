@@ -1,4 +1,4 @@
-# Digilog TV - 日本版 (Digilog TV - Japanese version)
+# Digilog TV - 日本版 (Digilog TV - Japanese Edition)
 
 <img src="screenshots/screenshot1.png" alt="Screenshot 1" width="270" height="602"><img src="screenshots/screenshot2.png" alt="Screenshot 2" width="270" height="602"><img src="screenshots/screenshot3.png" alt="Screenshot 3" width="270" height="602">
 
@@ -29,9 +29,9 @@ Linux Mint の Hypnotix にインスパイアされたオリジナルの Digilog
 
 チャンネルの提案については、Free-TV/IPTV と私たちの GitHub レポジトリの両方にイシューを登録してください。提案されたニュースチャンネルが私たちの基準を満たしている場合、Free-TV/IPTV にリストされ次第、アプリに追加します。
 
-## What is Digilog TV - Japanese version?
+## What is Digilog TV - Japanese Edition?
 
-A free and open-source TV app, Japanese version of the original Digilog TV which was inspired by Linux Mint's Hypnotix.
+A free and open-source TV app, Japanese Edition of the original Digilog TV which was inspired by Linux Mint's Hypnotix.
 
 The app features Japanese channels sourced from Free-TV/IPTV on GitHub, just like Hypnotix, to ensure that it only includes free, legal and publicly available content.
 
