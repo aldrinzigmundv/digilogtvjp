@@ -1,0 +1,1 @@
+Linux Mint の Hypnotix にインスパイアされたオリジナルの Digilog TV の日本版である、無料でオープンソースのテレビアプリです。
