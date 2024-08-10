@@ -4,11 +4,11 @@
 
 [<img src="badges/GetItOnGooglePlay_Badge_Web_color_Japanese.png"
      alt="Get it on Google Play"
-     height="63">](https://play.google.com/store/apps/details?id=io.github.aldrinzigmundv.digilogtv_jp)
+     height="63">](https://play.google.com/store/apps/details?id=io.github.aldrinzigmundv.digilogtvjp)
 
 [<img src="badges/GetItOnGooglePlay_Badge_Web_color_English.png"
      alt="Get it on Google Play"
-     height="63">](https://play.google.com/store/apps/details?id=io.github.aldrinzigmundv.digilogtv_jp)
+     height="63">](https://play.google.com/store/apps/details?id=io.github.aldrinzigmundv.digilogtvjp)
 
 または、[Releases セクション](https://github.com/aldrinzigmundv/digilogtv_jp/releases/latest) から最新のAPKをダウンロードしてください
 
