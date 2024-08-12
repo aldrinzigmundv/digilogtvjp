@@ -3,7 +3,7 @@
 <img src="screenshots/screenshot1.png" alt="Screenshot 1" width="270" height="602"><img src="screenshots/screenshot2.png" alt="Screenshot 2" width="270" height="602"><img src="screenshots/screenshot3.png" alt="Screenshot 3" width="270" height="602">
 
 [<img src="badges/GetItOnGooglePlay_Badge_Web_color_Japanese.png"
-     alt="Get it on Google Play"
+     alt="Google Play で手に入れよう"
      height="63">](https://play.google.com/store/apps/details?id=io.github.aldrinzigmundv.digilogtvjp)
 
 [<img src="badges/GetItOnGooglePlay_Badge_Web_color_English.png"
