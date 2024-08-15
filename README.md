@@ -18,7 +18,7 @@ Or download the latest APK from the [Releases Section](https://github.com/aldrin
 
 **このアプリは aldrinzigmund.com によって提供されています**
 
-**This app is powered by aldrinzigmund.com**
+**This app is powered by [aldrinzigmund.com](https://www.aldrinzigmund.com/)**
 
 
 ## Digilog TV - 日本版とは何ですか？
