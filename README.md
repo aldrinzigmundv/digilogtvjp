@@ -10,9 +10,9 @@
      alt="Get it on Google Play"
      height="63">](https://play.google.com/store/apps/details?id=io.github.aldrinzigmundv.digilogtvjp)
 
-または、[Releases セクション](https://github.com/aldrinzigmundv/digilogtv_jp/releases/latest) から最新のAPKをダウンロードしてください
+または、[Releases セクション](https://github.com/aldrinzigmundv/digilogtvjp/releases/latest) から最新のAPKをダウンロードしてください
 
-Or download the latest APK from the [Releases Section](https://github.com/aldrinzigmundv/digilogtv_jp/releases/latest)
+Or download the latest APK from the [Releases Section](https://github.com/aldrinzigmundv/digilogtvjp/releases/latest)
 
 
 
