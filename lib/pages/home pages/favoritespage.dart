@@ -8,7 +8,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:digilogtvjp/widgets/channellistitem.dart';
 
 //AdmobCode
-import 'package:google_mobile_ads/google_mobile_ads.dart';
+// import 'package:google_mobile_ads/google_mobile_ads.dart';
 //AdmobCode
 
 class FavoritesPage extends StatefulWidget {
@@ -29,7 +29,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
   int _focusedIndex = 2;
 
   //AdmobCode
-  BannerAd? _bannerAd;
+  // BannerAd? _bannerAd;
   //AdmobCode
 
   void _updateFocus(int newIndex) {
@@ -41,26 +41,26 @@ class _FavoritesPageState extends State<FavoritesPage> {
   }
 
   //AdmobCode
-  final adUnitId = "ca-app-pub-4100835771816662/9452825592";
-  void _loadAd() {
-    _bannerAd = BannerAd(
-      adUnitId: adUnitId,
-      request: const AdRequest(),
-      size: AdSize.banner,
-      listener: BannerAdListener(
-        onAdLoaded: (ad) {
-          debugPrint('$ad loaded.');
-          if (mounted) {
-            setState(() {});
-          }
-        },
-        onAdFailedToLoad: (ad, err) {
-          debugPrint('BannerAd failed to load: $err');
-          ad.dispose();
-        },
-      ),
-    )..load();
-  }
+  // final adUnitId = "ca-app-pub-4100835771816662/9452825592";
+  // void _loadAd() {
+  //   _bannerAd = BannerAd(
+  //     adUnitId: adUnitId,
+  //     request: const AdRequest(),
+  //     size: AdSize.banner,
+  //     listener: BannerAdListener(
+  //       onAdLoaded: (ad) {
+  //         debugPrint('$ad loaded.');
+  //         if (mounted) {
+  //           setState(() {});
+  //         }
+  //       },
+  //       onAdFailedToLoad: (ad, err) {
+  //         debugPrint('BannerAd failed to load: $err');
+  //         ad.dispose();
+  //       },
+  //     ),
+  //   )..load();
+  // }
   //AdmobCode
 
   Icon _favoriteIcon(String channelName) {
@@ -124,7 +124,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
     isTV = widget.isTV;
 
     //AdmobCode
-    _loadAd();
+    // _loadAd();
     //AdmobCode
 
     WidgetsBinding.instance.addPostFrameCallback((_) async {
@@ -153,16 +153,16 @@ class _FavoritesPageState extends State<FavoritesPage> {
                   ),
 
                   //AdmobCode
-                  (_bannerAd != null) ? Align(
-                    alignment: Alignment.bottomCenter,
-                    child: SafeArea(
-                      child: SizedBox(
-                        width: _bannerAd!.size.width.toDouble(),
-                        height: _bannerAd!.size.height.toDouble(),
-                        child: AdWidget(ad: _bannerAd!),
-                      ),
-                    ),
-                  ):SizedBox(),
+                  // (_bannerAd != null) ? Align(
+                  //   alignment: Alignment.bottomCenter,
+                  //   child: SafeArea(
+                  //     child: SizedBox(
+                  //       width: _bannerAd!.size.width.toDouble(),
+                  //       height: _bannerAd!.size.height.toDouble(),
+                  //       child: AdWidget(ad: _bannerAd!),
+                  //     ),
+                  //   ),
+                  // ):SizedBox(),
                   //AdmobCode
 
                   ListView.builder(
