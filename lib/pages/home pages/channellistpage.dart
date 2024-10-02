@@ -1,23 +1,22 @@
+import 'package:digilogtvjp/models/channel.dart';
 import 'package:flutter/material.dart';
-
 import 'package:digilogtvjp/services/storage.dart';
-import 'package:digilogtvjp/services/formatting.dart';
-import 'package:digilogtvjp/services/channels.dart';
 import 'package:digilogtvjp/services/routing.dart';
-import 'package:digilogtvjp/services/dpadoption.dart';
-import 'package:digilogtvjp/pages/home%20pages/home%20pages%20widgets/mainappbar.dart';
-import 'package:digilogtvjp/pages/home%20pages/home%20pages%20widgets/topnavbar.dart';
+import 'package:digilogtvjp/widgets/home%20pages%20widgets/mainappbar.dart';
+import 'package:digilogtvjp/widgets/home%20pages%20widgets/topnavbar.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:digilogtvjp/widgets/channellistitem.dart';
+
+//AdmobCode
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+//AdmobCode
 
 class ChannelListPage extends StatefulWidget {
   const ChannelListPage({
     super.key,
-    required this.storage,
-    required this.formattingProvider,
     required this.isTV,
   });
 
-  final StorageProvider storage;
-  final FormattingProvider formattingProvider;
   final bool isTV;
 
   @override
@@ -25,19 +24,48 @@ class ChannelListPage extends StatefulWidget {
 }
 
 class _ChannelListPageState extends State<ChannelListPage> {
-  late StorageProvider storage;
-  late FormattingProvider formattingProvider;
+  StorageProvider storageProvider = StorageProvider();
   late bool isTV;
   int _focusedIndex = 1;
 
+  //AdmobCode
+  BannerAd? _bannerAd;
+  //AdmobCode
+
   void _updateFocus(int newIndex) {
-    setState(() {
+    if (mounted) {
+      setState(() {
       _focusedIndex = newIndex;
     });
+    }
   }
 
-  _favoriteIcon(String channelName) {
-    if (!storage.favoritedChannels.contains(channelName)) {
+  //AdmobCode
+  final adUnitId = "ca-app-pub-4100835771816662/8354570184";
+  void _loadAd() {
+    _bannerAd = BannerAd(
+      adUnitId: adUnitId,
+      request: const AdRequest(),
+      size: AdSize.banner,
+      listener: BannerAdListener(
+        onAdLoaded: (ad) {
+          debugPrint('$ad loaded.');
+          if (mounted) {
+            setState(() {});
+          }
+        },
+        onAdFailedToLoad: (ad, err) {
+          debugPrint('BannerAd failed to load: $err');
+          ad.dispose();
+        },
+      ),
+    )..load();
+  }
+  //AdmobCode
+
+  Icon _favoriteIcon(String channelName) {
+    if (!storageProvider.storage
+        .get('favoritedChannelList', defaultValue: []).contains(channelName)) {
       return const Icon(
         Icons.star_border,
         color: Color(0xFFDC143C),
@@ -51,37 +79,50 @@ class _ChannelListPageState extends State<ChannelListPage> {
   }
 
   void _favoriteChange(int index) async {
-    if (storage.favoritedChannels
-        .contains(storage.channels.channelList[index].channelName)) {
-      setState(() {
-        storage.favoritedChannels
-            .remove(storage.channels.channelList[index].channelName);
-      });
+    List<String> favoritedChannels = storageProvider.storage
+        .get('favoritedChannelList', defaultValue: []).cast<String>();
+    String selectedChannel =
+        storageProvider.storage.get('channelList')[index].channelName;
+
+    if (favoritedChannels.contains(selectedChannel)) {
+      favoritedChannels.remove(selectedChannel);
+      await storageProvider.storage
+          .put('favoritedChannelList', favoritedChannels);
     } else {
-      setState(() {
-        storage.favoritedChannels
-            .add(storage.channels.channelList[index].channelName);
-      });
+      favoritedChannels.add(selectedChannel);
+      favoritedChannels.sort((a, b) => a.compareTo(b));
+      await storageProvider.storage
+          .put('favoritedChannelList', favoritedChannels);
     }
-    await storage.saveChanges();
   }
 
   void _goToChannel(int index) {
-    if (storage.channels.channelList[index].source == Source.iptv) {
-      goToChannelPageIPTV(
-          context: context, index: index, storage: storage, isTV: isTV);
+    if (storageProvider.storage.get('channelList')[index].source ==
+        Source.iptv) {
+      goToChannelPageIPTV(context: context, index: index, isTV: isTV);
     } else {
-      goToChannelPageYouTube(
-          context: context, index: index, storage: storage, isTV: isTV);
+      goToChannelPageYouTube(context: context, index: index, isTV: isTV);
+    }
+  }
+
+  void _updateScreen() {
+    if (mounted) {
+      setState(() {});
     }
   }
 
   @override
   void initState() {
     super.initState();
-    storage = widget.storage;
-    formattingProvider = widget.formattingProvider;
     isTV = widget.isTV;
+
+    //AdmobCode
+    _loadAd();
+    //AdmobCode
+
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      storageProvider.storage.listenable().addListener(_updateScreen);
+    });
   }
 
   @override
@@ -95,99 +136,60 @@ class _ChannelListPageState extends State<ChannelListPage> {
             TopNavBar(
               focusedIndex: _focusedIndex,
               updateFocus: _updateFocus,
-              storage: storage,
-              formattingProvider: formattingProvider,
               isTV: isTV,
             ),
+
+            //AdmobCode
+            (_bannerAd != null)
+                ? Align(
+                    alignment: Alignment.bottomCenter,
+                    child: SafeArea(
+                      child: SizedBox(
+                        width: _bannerAd!.size.width.toDouble(),
+                        height: _bannerAd!.size.height.toDouble(),
+                        child: AdWidget(ad: _bannerAd!),
+                      ),
+                    ),
+                  )
+                : SizedBox(),
+            //AdmobCode
+
             ListView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
-              itemCount: storage.channels.channelList.length,
+              itemCount: storageProvider.storage
+                  .get('channelList', defaultValue: []).length,
               itemBuilder: (context, index) {
                 bool isChannelFocused = _focusedIndex == index + 3;
-                Color? channelColor =
-                    isChannelFocused ? const Color(0xFFFFC0CB) : null;
                 bool isStarFocused = _focusedIndex ==
-                    index + 3 + storage.channels.channelList.length;
-                Color? starColor = isStarFocused ? const Color(0xFFFFC0CB) : null;
-                return Row(
-                  children: [
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(3.0),
-                        child: DpadOption(
-                          onSelect: () => _goToChannel(index),
-                          onFocus: (isFocused) {
-                            if (isFocused) {
-                              _updateFocus(index + 3);
-                            }
-                          },
-                          child: GestureDetector(
-                            onTap: () => _goToChannel(index),
-                            child: Card(
-                              color: channelColor,
-                              child: Padding(
-                                padding: const EdgeInsets.all(18.0),
-                                child: Row(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 9.0),
-                                      child: formattingProvider.formatIcon(
-                                          storage.channels.channelList[index]
-                                              .source),
-                                    ),
-                                    Flexible(
-                                      child: Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 9.0),
-                                        child: Text(
-                                          storage.channels.channelList[index]
-                                              .channelName,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: const TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 15.0),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(3.0),
-                      child: DpadOption(
-                        onSelect: () => _favoriteChange(index),
-                        onFocus: (isFocused) {
-                          if (isFocused) {
-                            _updateFocus(index +
-                                3 +
-                                storage.channels.channelList.length);
-                          }
-                        },
-                        child: GestureDetector(
-                          onTap: () => _favoriteChange(index),
-                          child: Card(
-                            color: starColor,
-                            child: Padding(
-                              padding: const EdgeInsets.all(18.0),
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 9.0),
-                                child: _favoriteIcon(storage
-                                    .channels.channelList[index].channelName),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
+                    index +
+                        3 +
+                        storageProvider.storage.get('channelList').length;
+
+                return ChannelListItem(
+                  channelName: storageProvider.storage
+                      .get('channelList')[index]
+                      .channelName,
+                  source:
+                      storageProvider.storage.get('channelList')[index].source,
+                  isFocused: isChannelFocused,
+                  isFavoriteFocused: isStarFocused,
+                  onChannelSelect: () => _goToChannel(index),
+                  onFavoriteSelect: () => _favoriteChange(index),
+                  onChannelFocus: (isFocused) {
+                    if (isFocused) _updateFocus(index + 3);
+                  },
+                  onFavoriteFocus: (isFocused) {
+                    if (isFocused) {
+                      _updateFocus((index +
+                              3 +
+                              storageProvider.storage.get('channelList').length)
+                          .toInt());
+                    }
+                  },
+                  favoriteIcon: _favoriteIcon(storageProvider.storage
+                      .get('channelList')[index]
+                      .channelName),
                 );
               },
             ),

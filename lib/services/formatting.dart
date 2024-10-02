@@ -1,9 +1,16 @@
+import 'package:digilogtvjp/models/channel.dart';
 import 'package:flutter/material.dart';
 
-import 'package:digilogtvjp/services/channels.dart';
-
 class FormattingProvider {
-  formatIcon(Source source) {
+  FormattingProvider._internal();
+
+  static final FormattingProvider _instance = FormattingProvider._internal();
+
+  factory FormattingProvider() {
+    return _instance;
+  }
+
+  Icon formatIcon(Source source) {
     if (source == Source.iptv) {
       return const Icon(
         Icons.satellite_alt,

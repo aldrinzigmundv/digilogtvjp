@@ -1,0 +1,158 @@
+[
+    {
+        "channelName": "ABCテレビ",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx02",
+        "source": "iptv",
+        "contactpage": "https://corp.asahi.co.jp/ja/contact/index.html"
+    },
+    {
+        "channelName": "BS朝日",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs03&isp=10&bind=0&uin=159413&playseek=0",
+        "source": "iptv",
+        "contactpage": "https://www.bs-asahi.co.jp/contact/"
+    },
+    {
+        "channelName": "BSテレ東",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs05&isp=10&bind=0&uin=159413&playseek=0",
+        "source": "iptv",
+        "contactpage": "https://www.bs-tvtokyo.co.jp/opinion/"
+    },
+    {
+        "channelName": "BS日テレ",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs02",
+        "source": "iptv",
+        "contactpage": "https://bs4-app.sign-post.jp/form/562459cf-2e9a-4e4f-ab7d-5932955a302f.html"
+    },
+    {
+        "channelName": "BSフジテレビ",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs06",
+        "source": "iptv",
+        "contactpage": "https://www.bsfuji.tv/top/voice/index.html"
+    },
+    {
+        "channelName": "BS-TBS",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs04",
+        "source": "iptv",
+        "contactpage": "https://bs.tbs.co.jp/inquiry/"
+    },
+    {
+        "channelName": "フジテレビ",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd05",
+        "source": "iptv",
+        "contactpage": "https://www.fujitv.co.jp/safe/contact/index.html"
+    },
+    {
+        "channelName": "カンテレ",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx03",
+        "source": "iptv",
+        "contactpage": "https://www.ktv.jp/goiken/"
+    },
+    {
+        "channelName": "読売テレビ",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx04",
+        "source": "iptv",
+        "contactpage": "https://www.ytv.co.jp/bangumishinsa/"
+    },
+    {
+        "channelName": "MBSテレビ",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx01",
+        "source": "iptv",
+        "contactpage": "https://www.mbs.jp/kouhou/#inquiry"
+    },
+    {
+        "channelName": "NHK BS",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs11",
+        "source": "iptv",
+        "contactpage": "https://www.nhk.or.jp/css/contact/"
+    },
+    {
+        "channelName": "NHK教育テレビジョン",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx06",
+        "source": "iptv",
+        "contactpage": "https://www.nhk.or.jp/css/contact/"
+    },
+    {
+        "channelName": "NHK総合テレビジョン (大阪)",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx06",
+        "source": "iptv",
+        "contactpage": "https://www.nhk.or.jp/css/contact/"
+    },
+    {
+        "channelName": "NHK総合テレビジョン (東京)",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd01",
+        "source": "iptv",
+        "contactpage": "https://www.nhk.or.jp/css/contact/"
+    },
+    {
+        "channelName": "NHK World-Japan",
+        "link": "https://nhkwlive-ojp.akamaized.net/hls/live/2003459/nhkwlive-ojp-en/index.m3u8",
+        "source": "iptv",
+        "contactpage": "https://www3.nhk.or.jp/nhkworld/en/contact/"
+    },
+    {
+        "channelName": "QVC",
+        "link": "https://cdn-live1.qvc.jp/iPhone/1501/1501.m3u8",
+        "source": "iptv",
+        "contactpage": "https://qvc.jp/information/guide/contact"
+    },
+    {
+        "channelName": "サンテレビ",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx07",
+        "source": "iptv",
+        "contactpage": "https://www.sun-tv.co.jp/message/"
+    },
+    {
+        "channelName": "Shop Channel",
+        "link": "https://stream3.shopch.jp/HLS/master.m3u8",
+        "source": "iptv",
+        "contactpage": "https://www.shopch.jp/InquiryInit.do?il=Footer&ic=contact"
+    },
+    {
+        "channelName": "テレビ朝日",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd06",
+        "source": "iptv",
+        "contactpage": "https://www.tv-asahi.co.jp/contact/"
+    },
+    {
+        "channelName": "テレビ大阪",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx05",
+        "source": "iptv",
+        "contactpage": "https://www.tv-osaka.co.jp/corporate/contact/"
+    },
+    {
+        "channelName": "テレ東",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd07",
+        "source": "iptv",
+        "contactpage": "https://www.tv-tokyo.co.jp/index/company/toiawase.html"
+    },
+    {
+        "channelName": "TBS News",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=cs11",
+        "source": "iptv",
+        "contactpage": "https://www.tbs.co.jp/contact/"
+    },
+    {
+        "channelName": "TBSテレビ",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd04",
+        "source": "iptv",
+        "contactpage": "https://www.tbs.co.jp/contact/"
+    },
+    {
+        "channelName": "Tokyo MX",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd08",
+        "source": "iptv",
+        "contactpage": "https://s.mxtv.jp/company/contact.html"
+    },
+    {
+        "channelName": "日テレ",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd03",
+        "source": "iptv",
+        "contactpage": "https://www.ntv.co.jp/staff/goiken/form.html"
+    },
+    {
+        "channelName": "日テレNEWS24",
+        "link": "https://n24-cdn-live.ntv.co.jp/ch01/index.m3u8",
+        "source": "iptv",
+        "contactpage": "https://apps.ntv.co.jp/news24/form/795b6bf2-054f-4444-865e-b019a8bf0985.html"
+    }
+]
