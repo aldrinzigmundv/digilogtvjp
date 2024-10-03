@@ -43,6 +43,7 @@ For channel suggestions, please file an issue on both Free-TV/IPTV and our GitHu
 * 多彩な日本のチャンネルを提供
 * お気に入りチャンネルに素早くアクセスできる便利なリスト
 * 無料で合法かつ公に利用可能なコンテンツのみを収録
+* 将来の開発計画をサポートするための広告（Playストアバージョンのみ）ユーザー体験を妨げない設計
 
 ## Features
 * Free and open-source
@@ -50,6 +51,7 @@ For channel suggestions, please file an issue on both Free-TV/IPTV and our GitHu
 * Offers a diverse selection of Japanese channels
 * Convenient favorites list for quick access to your preferred channels
 * Includes only free, legal, and publicly available content
+* Non-disruptive ads (Play Store version only) to support future development plans
 
 ## このアプリの維持をサポートするためにXMRを寄付してください
 
