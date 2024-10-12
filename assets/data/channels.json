@@ -1,85 +1,85 @@
 [
     {
         "channelName": "ABCテレビ",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx02",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx02&isp=7",
         "source": "iptv",
         "contactpage": "https://corp.asahi.co.jp/ja/contact/index.html"
     },
     {
         "channelName": "BS朝日",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs03&isp=10&bind=0&uin=159413&playseek=0",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs03&isp=7&bind=0&uin=159413&playseek=0",
         "source": "iptv",
         "contactpage": "https://www.bs-asahi.co.jp/contact/"
     },
     {
         "channelName": "BSテレ東",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs05&isp=10&bind=0&uin=159413&playseek=0",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs05&isp=7&bind=0&uin=159413&playseek=0",
         "source": "iptv",
         "contactpage": "https://www.bs-tvtokyo.co.jp/opinion/"
     },
     {
         "channelName": "BS日テレ",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs02",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs02&isp=7",
         "source": "iptv",
         "contactpage": "https://bs4-app.sign-post.jp/form/562459cf-2e9a-4e4f-ab7d-5932955a302f.html"
     },
     {
         "channelName": "BSフジテレビ",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs06",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs06&isp=7",
         "source": "iptv",
         "contactpage": "https://www.bsfuji.tv/top/voice/index.html"
     },
     {
         "channelName": "BS-TBS",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs04",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs04&isp=7",
         "source": "iptv",
         "contactpage": "https://bs.tbs.co.jp/inquiry/"
     },
     {
         "channelName": "フジテレビ",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd05",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd05&isp=7",
         "source": "iptv",
         "contactpage": "https://www.fujitv.co.jp/safe/contact/index.html"
     },
     {
         "channelName": "カンテレ",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx03",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx03&isp=7",
         "source": "iptv",
         "contactpage": "https://www.ktv.jp/goiken/"
     },
     {
         "channelName": "読売テレビ",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx04",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx04&isp=7",
         "source": "iptv",
         "contactpage": "https://www.ytv.co.jp/bangumishinsa/"
     },
     {
         "channelName": "MBSテレビ",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx01",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx01&isp=7",
         "source": "iptv",
         "contactpage": "https://www.mbs.jp/kouhou/#inquiry"
     },
     {
         "channelName": "NHK BS",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs11",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs11&isp=7",
         "source": "iptv",
         "contactpage": "https://www.nhk.or.jp/css/contact/"
     },
     {
         "channelName": "NHK教育テレビジョン",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx06",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx06&isp=7",
         "source": "iptv",
         "contactpage": "https://www.nhk.or.jp/css/contact/"
     },
     {
         "channelName": "NHK総合テレビジョン (大阪)",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx06",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx06&isp=7",
         "source": "iptv",
         "contactpage": "https://www.nhk.or.jp/css/contact/"
     },
     {
         "channelName": "NHK総合テレビジョン (東京)",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd01",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd01&isp=7",
         "source": "iptv",
         "contactpage": "https://www.nhk.or.jp/css/contact/"
     },
@@ -97,7 +97,7 @@
     },
     {
         "channelName": "サンテレビ",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx07",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx07&isp=7",
         "source": "iptv",
         "contactpage": "https://www.sun-tv.co.jp/message/"
     },
@@ -109,43 +109,43 @@
     },
     {
         "channelName": "テレビ朝日",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd06",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd06&isp=7",
         "source": "iptv",
         "contactpage": "https://www.tv-asahi.co.jp/contact/"
     },
     {
         "channelName": "テレビ大阪",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx05",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gx05&isp=7",
         "source": "iptv",
         "contactpage": "https://www.tv-osaka.co.jp/corporate/contact/"
     },
     {
         "channelName": "テレ東",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd07",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd07&isp=7",
         "source": "iptv",
         "contactpage": "https://www.tv-tokyo.co.jp/index/company/toiawase.html"
     },
     {
         "channelName": "TBS News",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=cs11",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=cs11&isp=7",
         "source": "iptv",
         "contactpage": "https://www.tbs.co.jp/contact/"
     },
     {
         "channelName": "TBSテレビ",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd04",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd04&isp=7",
         "source": "iptv",
         "contactpage": "https://www.tbs.co.jp/contact/"
     },
     {
         "channelName": "Tokyo MX",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd08",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd08&isp=7",
         "source": "iptv",
         "contactpage": "https://s.mxtv.jp/company/contact.html"
     },
     {
         "channelName": "日テレ",
-        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd03",
+        "link": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=gd03&isp=7",
         "source": "iptv",
         "contactpage": "https://www.ntv.co.jp/staff/goiken/form.html"
     },
